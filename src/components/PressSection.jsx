@@ -1,72 +1,130 @@
-import React from 'react';
-import '../css/PressSection.css';
-import logo1 from "../assets/logo/logo1.png"
+import React from "react";
+import "../css/PressSection.css";
 
 const PressSection = () => {
-  const articles = [
-    {
-      id: 1,
-      logo: logo1,
-      source: 'TED TALKS',
-      date: '2.22.22',
-      title: 'Meet the 2022 class of TED Fellows'
-    },
-    {
-      id: 2,
-      logo: 'path/to/correctional-news-logo.png',
-      source: 'CORRECTIONAL NEWS',
-      date: '2.2.22',
-      title: 'New Partnership Aims to Help Transform Prison Conditions'
-    },
-    {
-      id: 3,
-      logo: 'path/to/department-of-justice-logo.png',
-      source: 'DEPARTMENT OF JUSTICE',
-      date: '1.26.22',
-      title: 'Justice Department Establishes Initiative to Strengthen States’ Use of Criminal Justice Data'
-    },
-    {
-      id: 4,
-      logo: 'path/to/new-york-times-logo.png',
-      source: 'THE NEW YORK TIMES',
-      date: '12.27.21',
-      title: 'The 2021 Good Tech Awards'
-    },
-    {
-      id: 5,
-      logo: 'path/to/corrections1-logo.png',
-      source: 'CORRECTIONS1',
-      date: '11.18.21',
-      title: 'Maine DOC to better harness correctional data to improve outcomes'
-    },
-    {
-      id: 6,
-      logo: 'path/to/right-on-crime-logo.png',
-      source: 'RIGHT ON CRIME',
-      date: '9.9.21',
-      title: 'Together, We Can Make Mississippi Safer and Reentry-Ready'
-    }
-  ];
-
   return (
-    <div className="press-section">
-      <h1>Recidiviz in the Press</h1>
-      <div className="articles">
-        {articles.map(article => (
-          <div key={article.id} className="article">
-            <div className="article-header">
-              <img src={article.logo} alt={`${article.source} logo`} />
-              <div className="article-info">
-                <span>{article.source}</span>
-                <span>{article.date}</span>
+    <section className="press">
+      <div className="container">
+        <div className="press-header">
+          <h2 className="press-title">Recidiviz in the Press</h2>
+          <a href="#" className="btn press-link">
+            See All
+          </a>
+        </div>
+        <ul className="press-list grid">
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-1.png"
+                  alt="Ted Talks"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">TED TALKS</div>
+                <p className="press-card-date">2.22.22</p>
               </div>
-            </div>
-            <p>{article.title}</p>
-          </div>
-        ))}
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  Meet the 2022 class of TED Fellows
+                </a>
+              </h3>
+            </article>
+          </li>
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-3.png"
+                  alt="Correctional News"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">CORRECTIONAL NEWS</div>
+                <p className="press-card-date">2.22.22</p>
+              </div>
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  New Partnership Aims to Help Transform Prison Conditions
+                </a>
+              </h3>
+            </article>
+          </li>
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-4.png"
+                  alt="Department of Justice"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">DEPARTMENT OF JUSTICE</div>
+                <p className="press-card-date">1.26.22</p>
+              </div>
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  Justice Department Establishes Initiative to Strengthen
+                  States’ Use of Criminal Justice Data
+                </a>
+              </h3>
+            </article>
+          </li>
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-2.png"
+                  alt="The New York Times"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">THE NEW YORK TIMES</div>
+                <p className="press-card-date">12.27.21</p>
+              </div>
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  The 2021 Good Tech Awards
+                </a>
+              </h3>
+            </article>
+          </li>
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-5.png"
+                  alt="Corrections1"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">CORRECTIONS1</div>
+                <p className="press-card-date">11.18.21</p>
+              </div>
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  Maine DOC to better harness correctional data to improve
+                  outcomes
+                </a>
+              </h3>
+            </article>
+          </li>
+          <li className="press-item">
+            <article className="press-card">
+              <div className="press-card-top">
+                <img
+                  src="/src/assets/press/press-6.png"
+                  alt="Right on Crime"
+                  className="press-card-image"
+                />
+                <div className="press-card-author">RIGHT ON CRIME</div>
+                <p className="press-card-date">9.9.21</p>
+              </div>
+              <h3 className="press-card-title">
+                <a href="#" className="press-card-link">
+                  Together, We Can Make Mississippi Safer and Reentry-Ready
+                </a>
+              </h3>
+            </article>
+          </li>
+        </ul>
       </div>
-      <button className="see-all-button">See All</button>
-    </div>
+    </section>
   );
 };
 

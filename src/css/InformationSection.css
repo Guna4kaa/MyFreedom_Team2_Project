@@ -1,17 +1,31 @@
-.information-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  background-color: #f9f9f9;
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1152px; /*1280-64*2 = 1152*/
 }
 
-.main-text {
-  flex: 1;
-  margin-right: 50px;
+.grid {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-.main-text h1 {
-  font-family: 'Libre Baskerville', serif;
+.information {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  background-color: #f4f5f5;
+}
+
+.information-text {
+  grid-column: span 6;
+}
+
+.information-title {
+  margin: 0;
+  max-width: 70%;
+  font-family: "Libre Baskerville", sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 31px;
   line-height: 38px;
@@ -19,30 +33,39 @@
   color: #003331;
 }
 
-.info-cards {
+.information-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  flex: 2;
+  column-gap: 32px;
+  grid-column: 7 / span 6;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 36px;
 }
 
-.info-card {
-  background-color: #f9f9f9; /* Match background color to remove the border effect */
-  padding: 20px;
-  border-radius: 8px;
-  /* Remove box shadow */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.info-card h2 {
-  font-family: 'Public Sans', sans-serif;
+.information-item {
+  grid-column: span 3;
+}
+
+.information-subtitle {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  color: #003331; /* Match the color to your design */
+  color: #003331;
 }
 
-.info-card p {
-  font-size: 16px;
-  color: #555555; /* Adjust this color to match your design */
+.information-description {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #355362cc;
 }
