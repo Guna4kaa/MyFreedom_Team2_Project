@@ -1,5 +1,5 @@
-import React from "react";
-import './block1.module.css'; 
+// import React from "react";
+import './block1.css' 
 
 const Block1 = () => {
   return (
